@@ -18,30 +18,28 @@ class ColorPicker extends Component {
     onSettingColor(color) {
         this.props.onChangeColor(color);
     }
-    
+
     render() {
-        let elmColors = this.state.colors.map((color, index) => {
-            return <span 
-                key={index} 
-                style={this.setStyle(color)} 
-                onClick={ ()=>this.onSettingColor(color) } 
-                className={ this.props.defaultColor === color ? 'active' : '' }
+        let NxtColors = this.state.colors.map((color, index) => {
+            return <span
+                key={index}
+                style={this.setStyle(color)}
+                onClick={() => this.onSettingColor(color)}
             ></span>
         });
-
         return (
             <div className="panel panel-primary">
                 <div className="panel-heading">
-                    <h3 className="panel-title">Color Picker</h3>
+                    <h3 className="panel-title"> Color Picker </h3>
                 </div>
                 <div className="panel-body">
-                    { elmColors }
-                    <hr/>
+                    {NxtColors}
                 </div>
             </div>
         );
+
     }
-    }
+}
 
 
 
